@@ -47,7 +47,7 @@ jobs:
           username: ajithkumar.r@gemicates.in
           password: Ajith@01
           subject: "New Flutter Build - ${{ github.repository }}"
-          to: ajithkumar.r@gemicates.in
+          to: sathish.tamilmani@automios.com
           from: Flutter CI
           body: "New APK build attached. Commit: ${{ github.sha }}"
           attachments: build/app/outputs/flutter-apk/app-release.apk
