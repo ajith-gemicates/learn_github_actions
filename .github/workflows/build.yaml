@@ -38,3 +38,16 @@ jobs:
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Email APK
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ajithkumar.r@gemicates.in
+          password: Ajith@01
+          subject: "New Flutter Build - ${{ github.repository }}"
+          to: ajithkumar.r@gemicates.in
+          from: Flutter CI
+          body: "New APK build attached. Commit: ${{ github.sha }}"
+          attachments: build/app/outputs/flutter-apk/app-release.apk
